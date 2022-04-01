@@ -15,7 +15,7 @@
   */
 
 let count = (arrays) => {
-    arrays.flat()
+    return arrays.flat()
           .reduce((accumalator, inital) => {
                 if(accumalator[inital]){
                     accumalator[inital] += 1;
