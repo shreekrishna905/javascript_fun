@@ -33,3 +33,41 @@ console.log(array.slice(1,-1)) // 2,3,4
 console.log(array.slice(2,-2))
 
 /** 2. SPLICE */
+
+/** 
+a. It can delete elements from an array, insert new elements into an array, or
+perform both operations at the same time. 
+
+b. The first argument to splice() specifies the array position at which the insertion and/or deletion is to begin.
+
+c. The second argument specifies the number of elements that should be deleted from (spliced out of) the array. 
+
+d. If this second argument is omitted, all array elements from the start element to the end of the array are removed.
+
+e. The first two arguments to splice() specify which array elements are to be deleted.
+   These arguments may be followed by any number of additional arguments that specify elements
+   to be inserted into the array, starting at the position specified by the first argument.
+
+**/
+
+console.log("Splice operations")
+
+let a = [1,2,3,4,5,6,7,8];
+a.splice(4) // => [5,6,7,8]; a is now [1,2,3,4]
+console.log(a);
+a.splice(1,2); // => [2,3]; a is now [1,4]
+console.log(a);
+a.splice(1,1)
+console.log(a);
+
+
+// inserting with splice
+
+let x = [1,2,3,4,5];
+x.splice(2,0,"a","b") 
+console.log(x); // deletes => []; x is now [1,2,"a","b",3,4,5]
+x.splice(2,2,[1,2],3) 
+
+console.log(x) // deletes => ["a","b"]; x is now [1,2,[1,2],3,3,4,5]
+
+
